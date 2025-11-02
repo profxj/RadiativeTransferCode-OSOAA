@@ -9,7 +9,7 @@ Version 2.0 - April 2025
    :target: https://www.gnu.org/licenses/gpl-3.0
    :alt: License: GPL v3
 
-Welcome to the official documentation for **OSOAA** (Ocean Successive Orders with Atmosphere - Advanced), 
+Welcome to the **unofficial** documentation for **OSOAA** (Ocean Successive Orders with Atmosphere - Advanced), 
 a vector radiative transfer model for coupled atmosphere-ocean systems.
 
 Overview
