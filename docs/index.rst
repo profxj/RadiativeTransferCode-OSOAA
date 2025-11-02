@@ -1,7 +1,7 @@
 .. OSOAA documentation master file
 
 OSOAA: Ocean Successive Orders with Atmosphere - Advanced
-===========================================================
+=========================================================
 
 Version 2.0 - April 2025
 
