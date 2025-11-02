@@ -68,6 +68,9 @@ db.sqlite3-journal
 *.o
 *.exe
 
+# Built items
+exe/config.txt
+
 # Flask stuff:
 instance/
 .webassets-cache
