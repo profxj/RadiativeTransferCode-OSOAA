@@ -82,41 +82,35 @@ After downloading, you should see the following structure::
 Compilation
 -----------
 
-Step 1: Select Makefile
+Step 1: Environmental Variable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Set an environment variable for the OSOAA root directory. 
+Add to your shell profile (e.g., ``~/.bashrc``)::
+
+    export OSOAA_ROOT=/path/to/RadiativeTransfer-OSOAA
+
+Step 2: Select Makefile
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Choose the appropriate Makefile for your compiler:
 
 For **gfortran** (recommended)::
 
-    cp gen/Makefile_OSOAA.gfortran Makefile
+    gen/Makefile_OSOAA.gfortran Makefile
 
 For **f77**::
 
-    cp gen/Makefile_OSOAA.f77 Makefile
+    gen/Makefile_OSOAA.f77 Makefile
 
 For **g77**::
 
-    cp gen/Makefile_OSOAA.g77 Makefile
+    gen/Makefile_OSOAA.g77 Makefile
 
-Step 2: Configure Paths
-~~~~~~~~~~~~~~~~~~~~~~~
+Now execute::
 
-Edit the Makefile to set correct paths. The Makefile expects these variables:
-
-* ``SRC`` - Source directory (default: ``./src``)
-* ``INC`` - Include directory (default: ``./inc``)
-* ``BIB`` - Object files directory (default: ``./obj``)
-* ``EXE`` - Executable directory (default: ``./exe``)
-
-Most users can use the default paths without modification.
-
-Step 3: Compile
-~~~~~~~~~~~~~~~
-
-Run make::
-
-    make all
+    cd gen/
+    make -f Makefile_OSOAA.XXX 
 
 This will:
 
@@ -136,7 +130,7 @@ Successful compilation output::
     ------------>ok
 
 Compilation Troubleshooting
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Problem**: Compiler not found
 
