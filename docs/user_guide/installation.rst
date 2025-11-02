@@ -153,13 +153,6 @@ Compilation Troubleshooting
 
 **Solution**: Verify the ``NCL`` variable in Makefile points to ``./inc``
 
-**Problem**: Linking errors
-
-**Solution**: Check that all object files compiled successfully. Clean and rebuild::
-
-    make clean
-    make all
-
 Verifying Installation
 ----------------------
 
@@ -178,7 +171,12 @@ Test Basic Functionality
 
     ./OSOAA_MAIN.exe < /dev/null
 
-The program should start and wait for input. Press Ctrl+C to exit.
+The program should exit with:
+
+   OSOAA_MAIN : ERROR_1990 on parameters
+   --> Required (-Keyword Value) definition :      -OSOAA.ResRoot Value 
+   ==>  Working folder of OSOAA computations
+
 
 Setting Up Data Files
 ----------------------
@@ -219,8 +217,8 @@ Running the GUI
 
 .. code-block:: bash
 
-    cd ihm
-    java -jar OSOAA-GUI.jar
+    cd ihm/bin
+    ./runOSOAAUI.bash
 
 The GUI provides:
 
@@ -228,16 +226,6 @@ The GUI provides:
 * Form validation
 * Batch simulation setup
 * Result visualization
-
-Building from Source (Advanced)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If the pre-compiled GUI is not available::
-
-    cd ihm
-    ant build
-
-Or use your preferred Java IDE (Eclipse, IntelliJ, NetBeans).
 
 Environment Variables (Optional)
 ---------------------------------

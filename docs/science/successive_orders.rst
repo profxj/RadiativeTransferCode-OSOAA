@@ -79,7 +79,7 @@ The total radiance field is expanded as a series:
 
    \vec{I}_{total}(z,\mu,\phi) = \sum_{n=0}^{\infty} \vec{I}^{(n)}(z,\mu,\phi)
 
-Where **I**^(n) is the contribution from exactly n scattering events.
+Where **I**(n) is the contribution from exactly n scattering events.
 
 **Physical Interpretation:**
 

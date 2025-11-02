@@ -127,7 +127,6 @@ Documentation Contents
    :caption: Additional Information
    
    changelog
-   contributing
    license
 
 
