@@ -205,9 +205,7 @@ Long-term Goals
 Contributing
 ------------
 
-We welcome contributions! See :doc:`contributing` for guidelines.
-
-To report bugs or request features:
+We welcome contributions! To report bugs or request features:
 
 * Open an issue on GitHub
 * Email the development team

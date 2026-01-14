@@ -489,6 +489,13 @@ Where:
 Gaseous Absorption
 ------------------
 
+.. note::
+
+   **OSOAA V2.0 does not include explicit gaseous absorption modeling.**
+   The information below is provided for reference only. Users needing to account
+   for gas absorption should pre-compute effective transmission, adjust aerosol
+   absorption to approximate gas effects, or apply corrections in post-processing.
+
 Ozone
 ~~~~~
 
@@ -519,15 +526,6 @@ Oxygen
 - O₂ B-band: 687 nm
 
 **Use:** Atmospheric correction, cloud detection
-
-Note on Implementation
-~~~~~~~~~~~~~~~~~~~~~~
-
-OSOAA V2.0 does not include explicit gaseous absorption. Users can:
-
-1. Pre-compute effective transmission
-2. Adjust aerosol absorption to approximate gas effects
-3. Apply corrections in post-processing
 
 Total Atmospheric Optical Depth
 -------------------------------

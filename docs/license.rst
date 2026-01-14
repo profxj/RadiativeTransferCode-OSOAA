@@ -145,8 +145,6 @@ By contributing to OSOAA, you agree that your contributions will be licensed und
 
 All contributors retain copyright of their contributions but grant the OSOAA project the right to distribute their work under the GPL v3.0.
 
-See :doc:`contributing` for details on how to contribute.
-
 Trademark
 ---------
 

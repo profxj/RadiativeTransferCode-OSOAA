@@ -694,8 +694,6 @@ How can I contribute?
 5. Develop new features
 6. Validate with field data
 
-See :doc:`../contributing` for guidelines.
-
 Where is OSOAA development headed?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
