@@ -97,15 +97,15 @@ Choose the appropriate Makefile for your compiler:
 
 For **gfortran** (recommended)::
 
-    gen/Makefile_OSOAA.gfortran Makefile
+    gen/Makefile_OSOAA.gfortran
 
 For **f77**::
 
-    gen/Makefile_OSOAA.f77 Makefile
+    gen/Makefile_OSOAA.f77
 
 For **g77**::
 
-    gen/Makefile_OSOAA.g77 Makefile
+    gen/Makefile_OSOAA.g77
 
 Now execute::
 
