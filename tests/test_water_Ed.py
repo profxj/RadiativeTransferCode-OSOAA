@@ -761,7 +761,13 @@ class TestFullProfile:
         assert np.any(z < 0), "Profile should include ocean (z < 0)"
 
     def test_toa_ed_value(self, simulation):
-        """Verify Ed at TOA is approximately 1 (normalized to solar irradiance)."""
+        """
+        Verify Ed at TOA follows OSOAA's normalization convention.
+
+        OSOAA normalizes fluxes to solar irradiance at TOA = π.
+        At TOA, Ed = π × cos(θ_sun) where θ_sun is the solar zenith angle.
+        For default SZA=30°: Ed_toa = π × cos(30°) ≈ 2.72
+        """
         params = simulation.get_default_params()
         results = simulation.run(params)
 
@@ -772,9 +778,14 @@ class TestFullProfile:
         toa_idx = np.argmax(z)
         Ed_toa = flux['Ed_total'][toa_idx]
 
-        # At TOA, Ed should be close to 1 (direct solar beam)
-        # allowing for some tolerance due to normalization convention
-        assert 0.5 < Ed_toa < 1.5, f"Ed at TOA should be ~1, got {Ed_toa}"
+        # Get solar zenith angle from params
+        sza = params.get('ANG.Thetas', 30.0)
+        expected_Ed_toa = np.pi * np.cos(np.radians(sza))
+
+        # Ed at TOA should be π × cos(SZA) based on OSOAA normalization
+        # Allow 10% tolerance for numerical precision
+        assert abs(Ed_toa - expected_Ed_toa) / expected_Ed_toa < 0.1, \
+            f"Ed at TOA should be π×cos({sza}°)={expected_Ed_toa:.4f}, got {Ed_toa}"
 
     def test_surface_discontinuity(self, simulation):
         """
